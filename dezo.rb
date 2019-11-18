@@ -1,9 +1,7 @@
 class Dezo
-  require "pry"
   require 'net/http'
   require 'uri'
   require 'active_support/core_ext'
-  require 'io/console'
 
   GET_ID_ENDPOINT = "http://public.dejizo.jp/NetDicV09.asmx/SearchDicItemLite"
   GET_ITEM_ENDPOINT = "http://public.dejizo.jp/NetDicV09.asmx/GetDicItemLite"
@@ -13,7 +11,6 @@ class Dezo
       is_japanese = word =~ /(?:\p{Hiragana}|\p{Katakana}|[一-龠々])/
       dic_type = is_japanese ? "EdictJE" : "EJdict"
       search_service(dic_type, word)
-
     end
 
     def search_service(dic_type, word)
@@ -67,10 +64,9 @@ end
 
 loop do
   print "word> "
-  # STDIN.getch
   word = gets.chomp
 
-  break if word === "Q" ||word == "\C-c"
+  break if word === "Q"
   next if word ==  ""
   Dezo.search(word)
 end
