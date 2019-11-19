@@ -17,25 +17,17 @@ class Dezo
       id_url = GET_ID_ENDPOINT + id_params(dic_type, word)
       id_uri = URI.parse(URI.encode(id_url))
       id_response = Net::HTTP.get_response(id_uri)
-      begin
-        item_id = id_response.body.match(/<ItemID>(.+)<\/ItemID>/)[1]
-      rescue
-        return
-      end
+      item_id = id_response.body.match(/<ItemID>(.+)<\/ItemID>/)[1] rescue return
 
       item_url = GET_ITEM_ENDPOINT + item_params(dic_type, item_id)
       item_uri = URI.parse(URI.encode(item_url))
       item_response = Net::HTTP.get_response(item_uri)
 
-      begin
-        words = CGI.unescape(item_response.body).match(/<div>(.+)<\/div>/)[1]
-      rescue
-        return
-      end
+      words = CGI.unescape(item_response.body).match(/<div>(.+)<\/div>/)[1] rescue return
 
-      words.split("\t").each { |word| puts "- #{word.tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z")}" }
+      list = words.tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z").split("\t")
+      puts list.map{|item| "- #{item}"}
       puts ""
-
     end
 
     private
