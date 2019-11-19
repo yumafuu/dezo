@@ -33,7 +33,7 @@ class Dezo
         return
       end
 
-      words.split("\t").each { |word| puts "- #{word}" }
+      words.split("\t").each { |word| puts "- #{word.tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z")}" }
       puts ""
 
     end
