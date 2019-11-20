@@ -54,12 +54,3 @@ class Dezo
   end
 end
 
-loop do
-  print "word> "
-  word = gets.chomp
-
-  break if word === "Q"
-  next if word ==  ""
-  Dezo.search(word)
-end
-
