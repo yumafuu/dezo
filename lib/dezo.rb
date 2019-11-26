@@ -2,7 +2,6 @@ require "dezo/version"
 
 module Dezo
   class Error < StandardError; end
-  # Your code goes here...
   require 'net/http'
   require 'uri'
   require 'active_support/core_ext'
@@ -32,6 +31,7 @@ module Dezo
       list = words.tr("０-９Ａ-Ｚａ-ｚ", "0-9A-Za-z").split("\t")
       puts list.map{|item| "- #{item}"}
       puts ""
+      return list
     end
 
     private
