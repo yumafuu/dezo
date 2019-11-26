@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yuma Ishikawa"]
   spec.email         = ["yuma.fuu05@gmail.com"]
 
-  spec.summary       = "dezo can transrate jp to en, en to jp on cli."
-  spec.description   = "dezo can transrate jp to en, en to jp on cli."
+  spec.summary       = "dezo can transrate tool on cli."
+  spec.description   = "dezo can transrate japanese and english."
   spec.homepage      = "https://github.com/YumaFuu/dezo"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -38,7 +38,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.17"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_dependency "thor"
-  spec.add_dependency 'net/http'
-  spec.add_dependency 'uri'
-  spec.add_dependency 'active_support/core_ext'
+  spec.add_dependency "activesupport"
 end
