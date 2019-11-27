@@ -15,7 +15,7 @@ and then type a word which you wanna transrate,
 
 
 ## Depends on
-Dezo use デ辞蔵Webサービス
+Dezo uses デ辞蔵Webサービス
 
 Thank you!
 
