@@ -3,24 +3,14 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'dezo'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
     $ gem install dezo
 
 ## Usage
 
-`$ dezo`
-and type a word that you want to transrate
+`$ dezo` 
+
+
+and then type a word that you want to transrate
 
 ## Development
 
