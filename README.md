@@ -8,16 +8,14 @@ Dezo is a cli tool that transrate Japanese between English.
 
 ## Usage
 
-`$ dezo` 
+`$ dezo`
 
 
 and then type a word which you wanna transrate,
 
 
-## Depends on
-Dezo uses デ辞蔵Webサービス
-
-Thank you!
+## Thanks to
+Dezo depends on デ辞蔵Webサービス
 
 - デ辞蔵Webサービス
 https://www.est.co.jp/dev/dict/REST
