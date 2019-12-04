@@ -4,7 +4,7 @@ module Dezo
   class Error < StandardError; end
   require 'net/http'
   require 'uri'
-  require 'active_support/core_ext'
+  require 'cgi'
 
   GET_ID_ENDPOINT = "http://public.dejizo.jp/NetDicV09.asmx/SearchDicItemLite"
   GET_ITEM_ENDPOINT = "http://public.dejizo.jp/NetDicV09.asmx/GetDicItemLite"
