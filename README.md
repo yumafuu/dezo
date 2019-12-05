@@ -1,5 +1,5 @@
 # Dezo
-Dezo is a cli tool that transrates Japanese between English.
+Dezo is a cli tool that transrates a word Japanese between English.
 
 
 ## Installation
