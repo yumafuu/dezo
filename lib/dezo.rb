@@ -2,6 +2,9 @@ require "dezo/version"
 
 module Dezo
   class Error < StandardError; end
+  require 'input.rb'
+  require 'word.rb'
+  require 'io/console'
   require 'net/http'
   require 'uri'
   require 'cgi'

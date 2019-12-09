@@ -2,12 +2,11 @@
 
 require "dezo"
 
+history = []
 loop do
-  print "word> "
-  word = gets.chomp
-  #word = Word.new
-
-  break if word === "Q"
-  next if word ==  ""
+  word = Word.get
+  break if word.is_break
   Dezo.search(word)
+
+  history << word
 end
