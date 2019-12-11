@@ -2,12 +2,19 @@
 
 require "dezo"
 
-loop do
-  print "word> "
-  word = gets.chomp
-  #word = Word.new
+if ARGV.present?
+  words = ARGV
+  words.each do |word|
+    Dezo.search(word)
+  end
+else
+  loop do
+    print "word> "
+    word = STDIN.gets.chomp
+    #word = Word.new
 
-  break if word === "Q"
-  next if word ==  ""
-  Dezo.search(word)
+    break if word === "Q"
+    next if word ==  ""
+    Dezo.search(word)
+  end
 end
