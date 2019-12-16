@@ -2,7 +2,7 @@
 
 require "dezo"
 
-if ARGV.present?
+if ARGV != []
   words = ARGV
   words.each do |word|
     Dezo.search(word)
