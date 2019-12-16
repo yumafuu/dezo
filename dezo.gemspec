@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Yuma Ishikawa"]
   spec.email         = ["yuma.fuu05@gmail.com"]
 
-  spec.summary       = "dezo can transrate tool on cli."
-  spec.description   = "dezo can transrate japanese and english."
+  spec.summary       = "dezo transrates words on cli."
+  spec.description   = "dezo transrates words on cli."
   spec.homepage      = "https://github.com/YumaFuu/dezo"
 
 
