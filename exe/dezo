@@ -10,8 +10,12 @@ if ARGV != []
 else
   loop do
     print "word> "
-    word = STDIN.gets.chomp
-    #word = Word.new
+    begin
+      word = STDIN.gets.chomp
+    rescue Interrupt
+      puts "\nBye"
+      break
+    end
 
     break if word === "Q"
     next if word ==  ""
