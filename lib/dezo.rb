@@ -19,7 +19,7 @@ module Dezo
       if result.nil?
         search_language = is_japanese ? "英語" : "日本語"
         puts "You wanna search in google? (y / n)"
-        ans = gets.chomp
+        ans = STDIN.gets.chomp
         if  ans == "y" || ans == "Y"
           `open #{GOOGLE_SEARCH_ENDPOINT}?q=#{word}+#{search_language}`
         end
